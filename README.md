@@ -1,4 +1,4 @@
-# {{ project_name|title }} Django Project #
+# {{ project_name|title }}#
 ## Prerequisites ##
 
 - python >= 2.5
@@ -17,7 +17,7 @@ mkvirtualenv --no-site-packages {{ project_name }}-env
 
 #### For virtualenv ####
 ```bash
-virtualenv --no-site-packages {{ project_name }}-env
+virtualenv --no-site-packages --disctribute {{ project_name }}-env
 cd {{ project_name }}-env
 source bin/activate
 ```
@@ -46,9 +46,18 @@ vi {{ project_name }}/local_settings.py
 python manage.py syncdb
 ```
 
+### Apply database migrations ###
+```bash
+python manage.py migrate
+```
+
 ## Running ##
 ```bash
 python manage.py runserver
+```
+or 
+```
+make run
 ```
 
 Open browser to http://127.0.0.1:8000

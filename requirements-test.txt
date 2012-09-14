@@ -1,0 +1,6 @@
+nose
+webtest
+django-webtest
+django-coverage
+django-nose
+django-nose-exclude
