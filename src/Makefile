@@ -1,6 +1,9 @@
 all:
 	echo "nothing to be done"
 
+dev:
+	export DJANGO_SETTINGS_MODULE={{ project_name }}.settings_dev
+
 run:
 	python manage.py runserver_plus
 
