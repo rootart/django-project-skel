@@ -1,4 +1,4 @@
-DJANGO_SETTINGS_MODULE := {{ project_name }}.settings_dev
+DJANGO_SETTINGS_MODULE := {{ project_name }}.settings_local
 
 all:
 	echo "nothing to be done"
