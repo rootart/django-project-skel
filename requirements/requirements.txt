@@ -1,11 +1,11 @@
 django>=1.4.1
-south
-django-extensions
-django-pagination
-werkzeurg
 psycopg2
-docutils
-python-memcached
+
+south
+
+django-pagination
 django_compressor
+python-memcached
+
 PIL
 sorl-thumbnail
