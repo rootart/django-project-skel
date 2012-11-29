@@ -4,6 +4,7 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 LOCAL_INSTALLED_APPS = ('debug_toolbar', 'django_extensions', 'django_coverage', 'django_nose')
+INSTALLED_APPS += LOCAL_INSTALLED_APPS
 
 SOUTH_TESTS_MIGRATE = False
 SOUTH_DATABASE_ADAPTER='south.db.psycopg2'

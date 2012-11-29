@@ -1,6 +1,7 @@
-import os
+import os, sys
 
 PROJECT_DIR = os.path.dirname(__file__)
+sys.path.append(os.path.join(PROJECT_DIR, 'apps'),)
 PUBLIC_DIR = os.path.join(PROJECT_DIR, '..', '..', 'public')
 
 DEBUG = False
