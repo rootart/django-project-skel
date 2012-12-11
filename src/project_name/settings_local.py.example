@@ -30,7 +30,6 @@ if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
-
 # Debug toolbar configuration
 DEBUG_TOOLBAR_PANELS = (
     'debug_toolbar.panels.version.VersionDebugPanel',
@@ -52,3 +51,16 @@ DEBUG_TOOLBAR_CONFIG = {
 INTERNAL_IPS = ('127.0.0.1',)
 
 MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
+
+LOGGING['handlers']['default'] = {
+    'level': 'DEBUG',
+    'class': 'logging.handlers.RotatingFileHandler',
+    'filename': os.path.join(PROJECT_DIR, 'logs', '{{ project_name }}.log'),
+    'maxBytes': 1024 * 1024 * 10,
+    'backupCount': 50,
+    'formatter': 'standard',
+}
+
+LOGGING['formaters']['standard'] = {
+    'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
+}
