@@ -55,12 +55,13 @@ MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
 LOGGING['handlers']['default'] = {
     'level': 'DEBUG',
     'class': 'logging.handlers.RotatingFileHandler',
-    'filename': os.path.join(PROJECT_DIR, 'logs', '{{ project_name }}.log'),
+    'filename': os.path.join(PROJECT_DIR, '../../' 'logs', '{{ project_name }}.log'),
     'maxBytes': 1024 * 1024 * 10,
     'backupCount': 50,
     'formatter': 'standard',
 }
 
-LOGGING['formaters']['standard'] = {
+LOGGING['formatters'] = LOGGING.get('formatters') or {}
+LOGGING['formatters']['standard'] = {
     'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
 }

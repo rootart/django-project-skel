@@ -13,7 +13,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Etc/UTC'
 
 LANGUAGE_CODE = 'en-us'
 
