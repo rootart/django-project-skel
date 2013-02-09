@@ -79,7 +79,7 @@ FIXTURE_DIRS = (
 )
 
 LOCALE_PATHS = (
-    os.path.join(PROJECT_DIR, 'locale')
+    os.path.join(PROJECT_DIR, '..', 'locale')
 )
 
 INSTALLED_APPS = (
