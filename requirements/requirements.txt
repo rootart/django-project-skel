@@ -7,5 +7,5 @@ django-pagination
 django_compressor
 python-memcached
 
-PIL
+pillow
 sorl-thumbnail
